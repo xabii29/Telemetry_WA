@@ -47,3 +47,15 @@ Eventos iniciales: packet, session_started, session_saved, car_changed, connecti
     docs/              Especificaciones y registros
     tests/             Pruebas automatizadas
     .ai/               Artefactos de coordinación
+
+## Proyecto Legacy
+
+El proyecto mantiene un directorio denominado `legacy/` que contiene implementaciones históricas utilizadas como referencia funcional.
+
+El propósito de este directorio es conservar el conocimiento técnico validado durante el desarrollo del sistema original para Forza Motorsport (2023).
+
+El nuevo sistema no constituye una refactorización del proyecto anterior.
+
+La implementación será completamente nueva.
+
+Los módulos podrán consultar `legacy/` únicamente para comprender el comportamiento esperado y verificar resultados.

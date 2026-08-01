@@ -55,3 +55,37 @@ Un agente toca varios ámbitos solo cuando la tarea lo autorice.
 ## Entrega
 
 Reporta cambios, decisiones, verificaciones, resultados, riesgos y pendientes. No afirmes que algo está probado si no ejecutaste una verificación.
+
+## Uso del directorio legacy/
+
+El directorio `legacy/` contiene implementaciones previamente desarrolladas y funcionales para Forza Motorsport (2023).
+
+Estos archivos constituyen la referencia técnica utilizada para validar:
+
+- Decodificación del protocolo UDP.
+- Algoritmos ya comprobados.
+- Lógica de módulos existentes.
+- Comportamiento esperado del sistema.
+
+### Restricciones
+
+El código contenido en `legacy/` NO forma parte de la nueva arquitectura.
+
+Está prohibido:
+
+- Copiar archivos completos.
+- Adaptar la arquitectura al código legacy.
+- Reproducir dependencias del proyecto anterior.
+- Mantener estructuras heredadas por compatibilidad.
+
+Está permitido:
+
+- Consultar algoritmos.
+- Verificar fórmulas.
+- Comparar resultados.
+- Validar el comportamiento esperado.
+- Extraer únicamente la lógica necesaria para una nueva implementación.
+
+Toda funcionalidad incorporada al nuevo sistema deberá implementarse nuevamente respetando la arquitectura definida en ARCHITECTURE.md.
+
+El objetivo es preservar el conocimiento adquirido, no reutilizar la estructura del proyecto anterior.
