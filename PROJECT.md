@@ -1,7 +1,7 @@
 
 # Objetivo de la versión 1.0
 
-## Soporte para Forza Motorsport (2023).
+## Soporte para Forza Motorsport (2023)
 
 Un único Driver.
 Dashboard web.
