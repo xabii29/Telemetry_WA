@@ -40,6 +40,8 @@ No introducir React, Angular, Vue, Electron, Node, TypeScript, Bootstrap, Tailwi
 - Contrato de telemetría: docs/PROTOCOL.md
 - Drivers: docs/DRIVERS.md
 - Módulos: docs/MODULES.md
+- Referencia histórica: docs/LEGACY.md
+- Registro de decisiones: docs/DECISIONS.md
 - Handoff: docs/HANDOFF.md
 
 ## Estructura

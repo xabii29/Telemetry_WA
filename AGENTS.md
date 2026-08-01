@@ -58,9 +58,9 @@ Reporta cambios, decisiones, verificaciones, resultados, riesgos y pendientes. N
 
 ## Uso del directorio legacy/
 
-El directorio `legacy/` contiene implementaciones previamente desarrolladas y funcionales para Forza Motorsport (2023).
+El directorio `legacy/` es material de referencia **estrictamente de solo lectura**. Contiene implementaciones y resultados previamente validados para Forza Motorsport (2023); no forma parte del producto nuevo ni de su superficie de mantenimiento.
 
-Estos archivos constituyen la referencia técnica utilizada para validar:
+Estos archivos constituyen evidencia técnica que puede consultarse para validar:
 
 - Decodificación del protocolo UDP.
 - Algoritmos ya comprobados.
@@ -69,10 +69,11 @@ Estos archivos constituyen la referencia técnica utilizada para validar:
 
 ### Restricciones
 
-El código contenido en `legacy/` NO forma parte de la nueva arquitectura.
+El código, datos y resultados contenidos en `legacy/` NO forman parte de la nueva arquitectura. Ninguna tarea autoriza cambios dentro de ese directorio, salvo una tarea documental explícita aprobada para preservar o corregir su inventario.
 
 Está prohibido:
 
+- Crear, editar, mover, renombrar o eliminar archivos en `legacy/`.
 - Copiar archivos completos.
 - Adaptar la arquitectura al código legacy.
 - Reproducir dependencias del proyecto anterior.
@@ -86,6 +87,6 @@ Está permitido:
 - Validar el comportamiento esperado.
 - Extraer únicamente la lógica necesaria para una nueva implementación.
 
-Toda funcionalidad incorporada al nuevo sistema deberá implementarse nuevamente respetando la arquitectura definida en ARCHITECTURE.md.
+Toda funcionalidad incorporada al nuevo sistema deberá implementarse nuevamente, fuera de `legacy/`, respetando la arquitectura definida en ARCHITECTURE.md. Cuando se use la referencia para una decisión, registrar qué comportamiento o resultado se comparó y conservar la nueva evidencia en `tests/` o `docs/`.
 
 El objetivo es preservar el conocimiento adquirido, no reutilizar la estructura del proyecto anterior.

@@ -11,6 +11,7 @@ El proyecto está en pre-alfa. Se definieron límites de capas, reglas de colabo
 - Backend: adquisición, sesiones, persistencia de datos crudos y distribución.
 - Frontend: TelemetryBus, análisis y visualización mediante módulos aislados.
 - Los contratos aún no contienen especificación binaria ni unidades confirmadas.
+- `legacy/` es referencia estrictamente de solo lectura: contiene implementaciones y resultados validados para Forza Motorsport (2023), pero no es una dependencia ni una base para copiar código.
 
 ## Próximo paso recomendado
 
