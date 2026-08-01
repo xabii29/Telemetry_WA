@@ -2,7 +2,7 @@
 
 ## Estado
 
-El proyecto está en pre-alfa. Se definieron límites de capas, reglas de colaboración y una secuencia de trabajo; aún no hay implementación de producto.
+El proyecto está en pre-alfa. Existe un primer corte vertical experimental: modelo de paquete, adaptador Forza, seguimiento de sesión, recepción UDP y bus web. No se considera todavía un dashboard funcional.
 
 ## Decisiones vigentes
 
@@ -10,13 +10,13 @@ El proyecto está en pre-alfa. Se definieron límites de capas, reglas de colabo
 - Drivers independientes normalizan telemetría nativa a TelemetryPacket.
 - Backend: adquisición, sesiones, persistencia de datos crudos y distribución.
 - Frontend: TelemetryBus, análisis y visualización mediante módulos aislados.
-- Los contratos aún no contienen especificación binaria ni unidades confirmadas.
+- La especificación binaria y las unidades aún requieren muestras trazables; el driver inicial está cubierto solo por pruebas sintéticas.
 - `legacy/` es referencia estrictamente de solo lectura: contiene implementaciones y resultados validados para Forza Motorsport (2023), pero no es una dependencia ni una base para copiar código.
 
 ## Próximo paso recomendado
 
-Completar Issue 001: reunir fuente verificable o muestras reales de UDP de Forza Motorsport (2023) y convertir el borrador de docs/PROTOCOL.md en un contrato v1 con campos, unidades y eventos precisos.
+Obtener una captura UDP autorizada de Forza Motorsport (2023), crear un fixture, comparar sus valores contra el juego y convertir `docs/PROTOCOL.md` en contrato v1. En paralelo, implementar Inputs y Motion sobre `packet` sin acoplar módulos.
 
 ## Verificación realizada
 
-Revisión documental y de estructura. No hay código ejecutable ni pruebas aún.
+Revisión del legado y pruebas de decodificación sintética, cambio de coche y sintaxis JavaScript. Falta verificación con UDP real.

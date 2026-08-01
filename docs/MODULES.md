@@ -13,14 +13,19 @@ Cada módulo declara eventos consumidos, campos requeridos y unidades, salida vi
 - Usar procesamiento incremental; un Web Worker necesita justificación medida.
 - Plotly se actualiza incrementalmente cuando corresponda.
 
-## Módulos planeados
+## Módulos derivados de la referencia validada
 
 | Módulo | Estado | Contrato requerido |
 | --- | --- | --- |
-| Diagnóstico de conexión | Planeado | Eventos de transporte. |
-| Pedales | Planeado | Controles. |
-| Pista | Planeado | Posición y sesión. |
-| Dyno | Futuro | Motor, transmisión y evidencia física. |
-| Transmisión | Futuro | Motor y transmisión. |
-| Suspensión | Futuro | Chasis. |
-| Neumáticos / temperaturas | Futuro | Chasis. |
+| Diagnóstico de conexión | Esqueleto | Eventos de transporte. |
+| Vehículo | Esqueleto | Identidad, clase, PI y tracción. |
+| Pedales | Siguiente | Controles normalizados. |
+| Movimiento | Siguiente | Velocidad, posición y velocidad vectorial. |
+| Pista | Siguiente | Posición X/Z, controles y sesión. |
+| Motor | Siguiente | RPM, potencia, torque, boost y combustible. |
+| Dyno | Siguiente | Motor, controles y vehículo; no es responsabilidad del backend. |
+| Sesión | Siguiente | Vuelta, posición, distancia y tiempos confirmados. |
+| Transmisión | Investigación | Motor, ruedas, embrague y tracción. |
+| Suspensión / neumáticos | Futuro | Chasis. |
+
+El detalle y trazabilidad están en `docs/LEGACY_FINDINGS.md`.

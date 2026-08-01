@@ -6,7 +6,7 @@ El primer objetivo es Forza Motorsport (2023); el diseño no debe asumir que ser
 
 ## Estado
 
-Pre-alfa. La arquitectura y las reglas de colaboración están definidas; aún no hay implementación.
+Pre-alfa. Hay un esqueleto experimental de adquisición UDP, driver Forza, eventos de sesión y módulos web aislados. Aún falta una captura UDP trazable para estabilizar el contrato y el driver.
 
 ## Arquitectura
 
@@ -43,6 +43,7 @@ No introducir React, Angular, Vue, Electron, Node, TypeScript, Bootstrap, Tailwi
 - Referencia histórica: docs/LEGACY.md
 - Registro de decisiones: docs/DECISIONS.md
 - Handoff: docs/HANDOFF.md
+- Hallazgos preservados del legado: docs/LEGACY_FINDINGS.md
 
 ## Estructura
 

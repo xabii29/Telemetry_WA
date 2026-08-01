@@ -25,7 +25,7 @@ Las firmas definitivas se fijarán con el esquema de TelemetryPacket.
 
 | Juego | Estado | Evidencia |
 | --- | --- | --- |
-| Forza Motorsport (2023) | Planeado | Referencia legacy validada; faltan muestras trazables y contrato interno v1. |
+| Forza Motorsport (2023) | Experimental | Esqueleto de driver y pruebas sintéticas; faltan muestras trazables y contrato interno v1. |
 | Forza Horizon 5 | Futuro | No investigado. |
 | Forza Motorsport 7 | Futuro | No investigado. |
 | Assetto Corsa | Futuro | No investigado. |
