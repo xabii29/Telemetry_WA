@@ -1,0 +1,363 @@
+/* ============================================================
+   Paleta de colores -- misma que la versión Qt (dyno_gui.py)
+   ============================================================ */
+:root {
+    --color-bg: #1c1c1a;
+    --color-surface: #2c2c2a;
+    --color-surface-light: #444441;
+    --color-border: #5f5e5a;
+    --color-text-primary: #f1efe8;
+    --color-text-secondary: #b4b2a9;
+    --color-teal: #1d9e75;
+    --color-coral: #d85a30;
+    --color-amber: #ba7517;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    font-family: -apple-system, "Segoe UI", sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* ================= BARRA DE NAVEGACIÓN (estilo pestañas de navegador) ================= */
+.navbar {
+    display: flex;
+    gap: 2px;
+    background: var(--color-bg);
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.nav-tab {
+    background: var(--color-surface-light);
+    color: var(--color-text-secondary);
+    border: none;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: inherit;
+    position: relative;
+    top: 1px; /* la activa "se funde" con el borde de abajo */
+}
+
+.nav-tab:hover {
+    color: var(--color-text-primary);
+}
+
+.nav-tab.active {
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+    font-weight: 500;
+    z-index: 1; /* por encima de las vecinas, para que su borde tape los de al lado */
+}
+
+/* ================= BARRA DE INFO DEL AUTO ================= */
+.car-info-bar {
+    background: var(--color-surface);
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    font-size: 13px;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.car-info-sep {
+    color: var(--color-border);
+}
+
+.car-info-value {
+    color: var(--color-text-primary);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* ================= CONTENIDO DE PESTAÑAS ================= */
+.tab-content {
+    flex-grow: 1;
+    min-height: 0;
+    display: flex;
+}
+
+/* Regla reforzada: section.tab-pane (mayor especificidad que .tab-pane
+   solo) para garantizar que gane sobre cualquier otra regla de display
+   que pudiera aplicar a <section>, evitando que se vean varias pestañas
+   apiladas a la vez. */
+section.tab-pane {
+    display: none;
+    width: 100%;
+}
+
+section.tab-pane.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= HOME: grid 2x2 con una mini-vista por módulo ================= */
+#tab-home {
+    padding: 16px;
+}
+
+.pedals-section {
+    background: var(--color-surface);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    height: 140px;
+    flex-shrink: 0;
+    display: flex;
+}
+
+.pedals-plot {
+    width: 100%;
+    height: 100%;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+    flex-grow: 1;
+    min-height: 0;
+}
+
+.home-cell {
+    display: flex;
+    min-height: 0;
+    min-width: 0;
+}
+
+.home-cell .plot-area {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.placeholder-mini {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+/* ================= PLACEHOLDERS (Velocidades, Pista, Suspensión) ================= */
+.placeholder-pane {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.placeholder-title {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.layout {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    min-height: 0;
+}
+
+/* ================= COLUMNA IZQUIERDA ================= */
+.side-panel {
+    background: var(--color-surface);
+    border-right: 1px solid var(--color-border);
+    width: 300px;
+    min-width: 260px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.heading {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+}
+
+.car-name {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0 0 16px 0;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.secondary {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+}
+
+.stat-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.unit-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+select {
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 4px 8px;
+}
+
+/* ================= COLUMNA DERECHA ================= */
+.main-panel {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0; /* permite que Plotly se ajuste dentro del flex */
+}
+
+.plot-area {
+    flex-grow: 1;
+    background: var(--color-surface);
+    border-radius: 8px;
+    min-height: 300px;
+}
+
+.progress-bar-outer {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    height: 26px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar-inner {
+    background: var(--color-teal);
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background: transparent;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-surface-light);
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover:not(:disabled) {
+    background: var(--color-surface-light);
+}
+
+.btn:disabled {
+    color: var(--color-text-secondary);
+    border-color: var(--color-surface);
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: var(--color-teal);
+    border: none;
+    color: #04342c;
+    font-weight: 500;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #5dcaa5;
+}
+
+.btn-danger {
+    border-color: var(--color-coral);
+    color: var(--color-coral);
+}
+
+.btn-danger:hover:not(:disabled) {
+    background: var(--color-coral);
+    color: #4a1b0c;
+}
+
+.save-status {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin: 0;
+    min-height: 16px;
+}
+
+/* Responsive: en pantallas angostas (celular), columnas apiladas */
+@media (max-width: 700px) {
+    .layout {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+    .side-panel {
+        width: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+    .plot-area {
+        min-height: 350px;
+    }
+}

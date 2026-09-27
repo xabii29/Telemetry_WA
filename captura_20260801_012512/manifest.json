@@ -1,0 +1,14 @@
+{
+  "captured_at_utc": "2026-08-01T07:25:12.940538+00:00",
+  "host": "0.0.0.0",
+  "port": 8000,
+  "packet_count": 67888,
+  "duration_seconds": 1154.156,
+  "packet_sizes_seen": {
+    "331": 67888
+  },
+  "note": "",
+  "raw_file": "raw.bin",
+  "index_file": "index.csv",
+  "warning": "Captura cruda, no interpretada. No asumir formato ni offsets sin contrastar contra docs/PROTOCOL.md y sin documentar la fuente en docs/DECISIONS.md o docs/LEGACY_FINDINGS.md."
+}
